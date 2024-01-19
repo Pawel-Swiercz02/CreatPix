@@ -6,9 +6,9 @@
 }
 
 body {
+    min-height: 100dvh;
     gap: 15px;
     color: white;
-    min-height: 100dvh;
     font-family: 'Inknut Antiqua', serif;
 }
 
@@ -59,14 +59,57 @@ header a:hover {
 
 main {
     background-color: #0f172a30;
-    font-family: 'Proza Libre', sans-serif;
     padding: 20px;
     border-radius: 20px;
     margin: 0 auto;
     min-width: 300px;
     max-width: 1000px;
     flex: 1;
+    gap: 24px;
 }
+
+/* GEMERATE CANVAS DIV */
+.control-div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.inputs-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
+}
+
+.width-input,
+.height-input {
+    max-width: 75px;
+    border: none;
+    opacity: 85%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+.generate-button {
+    font-size: 18px;
+    padding: 5px 0;
+    font-family: 'Proza Libre', sans-serif;
+    background-color: #0f172a80;
+    color: cyan;
+    border: 2px solid cyan;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.generate-button:hover {
+    background-color: rgba(0, 255, 255, 85%);
+    color: #0f172a80;
+    border-color: #0f172a80;
+}
+
 
 /* GRID/CANVAS: */
 .grid-div {
@@ -91,6 +134,16 @@ main {
 
 .painted {
     background-color: red;
+}
+
+.size-div {
+    font-size: 18px;
+    padding: 5px 0;
+    font-family: 'Proza Libre', sans-serif;
+    background-color: #0f172a30;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
 }
 
 
