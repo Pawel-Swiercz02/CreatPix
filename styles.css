@@ -63,15 +63,17 @@ main {
     border-radius: 20px;
     margin: 0 auto;
     min-width: 300px;
-    max-width: 1000px;
-    flex: 1;
+    max-width: 1200px;
     gap: 24px;
+    display: flex;
+    align-items: center;
 }
 
 /* GEMERATE CANVAS DIV */
 .control-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 14px;
 }
 
@@ -102,6 +104,8 @@ main {
     border: 2px solid cyan;
     border-radius: 20px;
     cursor: pointer;
+    min-width: 280px;
+    max-width: 400px;
 }
 
 .generate-button:hover {
@@ -115,7 +119,6 @@ main {
 .grid-div {
     display: flex;
     flex-wrap: wrap;
-    max-width: 288px;
 }
 
 .grid-square {
@@ -144,6 +147,8 @@ main {
     border-radius: 5px;
     color: white;
     text-align: center;
+    min-width: 280px;
+    max-width: 400px;
 }
 
 
