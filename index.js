@@ -1,5 +1,7 @@
 const grid = document.querySelector('.grid-div');
-const gridSqrs = [];
+const generateButton = document.querySelector('.generate-button');
+const sizeValDisplay = document.querySelector('.size-values');
+let gridSqrs = [];
 let mouseDown = false;
 let touchDown = false;
 
@@ -29,7 +31,6 @@ function enablePainting(square) {
     square.addEventListener('mouseover', () => {
         if (mouseDown === true) {
             square.classList.add('painted');
-            console.log(square);
         }
     });
     /*This code fixes the two problems I indicated above.*/
@@ -39,17 +40,27 @@ function enablePainting(square) {
 };
 
 function createGrid() {
+    grid.style.setProperty('max-width', width * 18 + 'px');
     for (let i = 0; i < numberOfSquares; i++) {
         const gridSquare = document.createElement('div');
         grid.appendChild(gridSquare);
         gridSquare.setAttribute('id', i + 1)
         gridSquare.classList.add('grid-square');
         gridSqrs.push(gridSquare);
-
         enablePainting(gridSquare);
     };
+    giveSquaresBackground();
+    sizeValDisplay.innerHTML = width + "x" + height;
 };
 createGrid();
+
+function removeGrid() {
+    gridSqrs = [];
+    for (let i = 0; i < numberOfSquares; i++) {
+        document.getElementById(i + 1).remove();
+    };
+};
+
 
 
 function giveSquaresBackground() {
@@ -76,4 +87,28 @@ function giveSquaresBackground() {
         };
     };
 };
-giveSquaresBackground();
+
+
+
+/* GENERATE CANVAS BUTTON */
+generateButton.addEventListener('click', createCustomGrid)
+
+
+function createCustomGrid() {
+    width = document.getElementById('width-val').value;
+    height = document.getElementById('height-val').value;
+    
+    /* First check if user gave correct width and height values, then generate canvas */
+    if (!width || !height) {
+        alert('You need to enter both width and height values in order to generate the canvas!');
+    }else if (width < 1 || height < 1){
+        alert('Both width and height values must be positive numbers!');
+    }else if (width > 64 || height > 64) {
+        alert ('Maximum width and height is 64!');
+    }else {
+        /* Removing the current canvas and then generating the custom canvas */
+        removeGrid();
+        numberOfSquares = width * height;
+        createGrid();
+    };
+};
