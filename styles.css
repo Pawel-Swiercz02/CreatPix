@@ -67,6 +67,7 @@ main {
     gap: 24px;
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 /* GEMERATE CANVAS DIV */
@@ -151,6 +152,23 @@ main {
     max-width: 400px;
 }
 
+footer {
+    background-color: #0f172a80; /* 80 at the end - 50% opacity */
+    padding: 10px 20px;
+    border-top: 5px solid pink;
+    text-align: center;
+}
+
+footer a {
+    color: cyan;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer a:hover{
+    transition-duration: 700ms;
+    color: pink;
+}
 
 
 
