@@ -3,6 +3,7 @@ Pixel Art Creator App to practice JavaScript, HTML &amp; CSS
 
 Best viewed on PC screens, because the grid is not responsive, but as a first simple JS project I'm still proud of how it came out.
 
+
 FOR  VERSION 2:
 
 -Tried to make created grid responsive, but I'll do that in a seperate version of the project, where I'll make the squares actually 1x1px instead of 18x18px like it is now.
