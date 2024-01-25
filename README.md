@@ -1,4 +1,4 @@
-# CreatPix
+# CreatePix
 Pixel Art Creator App to practice JavaScript, HTML &amp; CSS
 
 Best viewed on PC screens, because the grid is not responsive, but as a first simple JS project I'm still proud of how it came out.
